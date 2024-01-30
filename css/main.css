@@ -2282,6 +2282,19 @@ html.no-csstransitions .hero-content {
   opacity: 1;
 }
 
+/* animate events
+ * ------------------------------------------------------------------- */
+
+.slide-up {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.slide-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
 /* ------------------------------------------------------------------- 
  * ## hero animations
  * ------------------------------------------------------------------- */
