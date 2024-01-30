@@ -3556,6 +3556,9 @@ html.no-csstransitions .hero-content {
   }
 
 }
+.map-container {
+  height: 600px !important;
+}
 
 @media screen and (max-width:600px) {
   .page-header h1 {
@@ -3566,6 +3569,9 @@ html.no-csstransitions .hero-content {
     padding: 2rem;
   }
 
+}
+.map-container {
+  height: 500px !important;
 }
 
 @media screen and (max-width:500px) {
@@ -3590,7 +3596,9 @@ html.no-csstransitions .hero-content {
   }
 
 }
-
+.map-container {
+  height: 400px !important;
+}
 @media screen and (max-width:400px) {
   .page-header h1 {
     font-size: 4.2rem;
