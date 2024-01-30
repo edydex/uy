@@ -3397,6 +3397,9 @@ html.no-csstransitions .hero-content {
 .page-header--about {
   background-image: url(../images/header-bgs/about-header-bg-2000.jpg);
 }
+.page-header--give {
+  background-image: url(../images/header-bgs/give_header.jpg);
+}
 
 .page-header--contact {
   background-image: url(../images/header-bgs/contact-header-bg-2000.jpg);
@@ -3592,6 +3595,9 @@ html.no-csstransitions .hero-content {
   .page-header h1 {
     font-size: 4.2rem;
   }
+.map-container {
+  height: 400px !important;
+}
 
 }
 /*LoV additions: */
