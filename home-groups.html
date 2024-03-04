@@ -59,7 +59,7 @@
                 <li><a href="live.html" title="Live">Live</a></li>
                 <li><a href="about.html" title="About">About</a></li>
                 <li><a href="events.html" title="Services">Events</a></li>
-                <li><a href="donate.html" title="Donate">Donate</a></li>	
+                <li><a href="give" title="Give">Give</a></li>	
             </ul>
         </nav>
 
@@ -204,7 +204,7 @@
 
     </section> <!-- end s-social -->
 
-    <!-- footer
+   <!-- footer
     ================================================== -->
     <footer class="s-footer">
 
@@ -212,7 +212,7 @@
             <div class="column large-4 medium-5 tab-full">
                 <div class="footer-logo">
                     <a class="site-footer-logo" href="index.html">
-                        <img src="images/lovLogo.svg" alt="Homepage">
+                        <img src="images/uyagLogoZoomB&W_128x64.svg" alt="Homepage">
                     </a>
                 </div>  <!-- footer-logo -->
                 <p>
@@ -225,15 +225,15 @@
             <div class="column tab-full" style="max-width: 400px;">
                 <div class="row">
                     <div class="column medium-full">
-                        <h4 class="h6">Our Location</h4>
+                        <h4 class="h6">Contact Us</h4>
                         <p>
-                        17418 108th Ave SE <br>
-                        Renton, Washington <br>
-                        98055 US <!-- I'll need to move this to the right a b it more later -->
+                        Feel free to reach out <br>
+                        to us with any questions, <br>
+                        suggestions, or concerns <!-- I'll need to move this to the right a b it more later -->
                         </p>
         
                         <p>
-                        <a href="https://maps.app.goo.gl/Znu6bieFxvWoBNvF9" target="_blank" class="btn btn--footer">Get Directions</a>
+                        <a href="contact" target="_blank" class="btn btn--footer">Contact</a>
                         </p>
                     </div>
                     <!--<div class="column large-5 medium-full">
@@ -253,8 +253,8 @@
 
         <div class="row footer-bottom">
             <div class="column ss-copyright">
-                <span>© Copyright Life of Victory 2023</span> 
-                <span>See <a href="attributions.html">Attributions</a></span>
+                <span>© Copyright United Youth 2024</span> 
+<!--                <span>See <a href="attributions.html">Attributions</a></span> -->
             </div>
         </div> <!-- footer-bottom -->
 
@@ -272,5 +272,34 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const animatedElements = document.querySelectorAll('.slide-up');
+            const threshold = 80; // Adjust this threshold value as needed
+
+            function isInViewport(element) {
+                const rect = element.getBoundingClientRect();
+                return (
+                    rect.top >= -threshold &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) + threshold
+                );
+            }
+
+            function handleScroll() {
+                animatedElements.forEach((element) => {
+                    if (isInViewport(element) && !element.classList.contains('show')) {
+                        element.classList.add('show');
+                    }
+                });
+            }
+
+            // Initial check in case elements are already in the viewport
+            handleScroll();
+
+            // Add scroll event listener
+            window.addEventListener('scroll', handleScroll);
+        });
+    </script>
+</body>
 
 </body>

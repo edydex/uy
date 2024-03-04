@@ -67,7 +67,7 @@
                 <li><a href="index.html" title="Home">Home</a></li>
                 <li><a href="about.html" title="About">About</a></li>
                 <li><a href="events.html" title="Services">Events</a></li>
-                <li><a href="contact.html" title="Contact us">Contact</a></li>	
+                <li><a href="give" title="Give">Give</a></li>	
             </ul>
         </nav>
 
@@ -547,7 +547,7 @@
     </section> <!-- end s-social -->
 
 
-    <!-- footer
+   <!-- footer
     ================================================== -->
     <footer class="s-footer">
 
@@ -555,30 +555,31 @@
             <div class="column large-4 medium-5 tab-full">
                 <div class="footer-logo">
                     <a class="site-footer-logo" href="index.html">
-                        <img src="images/logo.svg" alt="Homepage">
+                        <img src="images/uyagLogoZoomB&W_128x64.svg" alt="Homepage">
                     </a>
                 </div>  <!-- footer-logo -->
                 <p>
-                Laborum ad explicabo. Molestiae voluptates est. Quisquam labore tenetur 
-                et assumenda voluptatibus a beatae. Rerum odio ducimus reprehenderit 
-                sit animi laborum nostrum dolorum animi voluptates est voluptatibus a beatae. 
+				The kingdom of heaven is like a treasure hidden in the field, 
+				which a man found and hid again; and from joy over it he 
+				goes and sells everything that he has, and buys that field. <br>
+				Matthew 13:44
                 </p>
             </div>
-            <div class="column large-half tab-full">
+            <div class="column tab-full" style="max-width: 400px;">
                 <div class="row">
-                    <div class="column large-7 medium-full">
-                        <h4 class="h6">Our Location</h4>
+                    <div class="column medium-full">
+                        <h4 class="h6">Contact Us</h4>
                         <p>
-                        1600 Amphitheatre Parkway <br>
-                        Mountain View, California <br>
-                        94043 US
+                        Feel free to reach out <br>
+                        to us with any questions, <br>
+                        suggestions, or concerns <!-- I'll need to move this to the right a b it more later -->
                         </p>
         
                         <p>
-                        <a href="https://goo.gl/maps/bc7C7eYtSmnNs6216" target="_blank" class="btn btn--footer">Get Direction</a>
+                        <a href="contact" target="_blank" class="btn btn--footer">Contact</a>
                         </p>
                     </div>
-                    <div class="column large-5 medium-full">
+                    <!--<div class="column large-5 medium-full">
                         <h4 class="h6">Quick Links</h4>
                         <ul class="footer-list">
                             <li><a href="index.html">Home</a></li>
@@ -588,15 +589,15 @@
                             <li><a href="events.html">Upcoming Events</a></li>
                             <li><a href="contact.html">Contact</a></li>
                         </ul>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div> <!-- end footer-top -->
 
         <div class="row footer-bottom">
             <div class="column ss-copyright">
-                <span>© Copyright Hesed 2019</span> 
-                <span>Design by <a href="https://www.styleshout.com/">StyleShout</a></span>
+                <span>© Copyright United Youth 2024</span> 
+<!--                <span>See <a href="attributions.html">Attributions</a></span> -->
             </div>
         </div> <!-- footer-bottom -->
 
@@ -614,5 +615,34 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const animatedElements = document.querySelectorAll('.slide-up');
+            const threshold = 80; // Adjust this threshold value as needed
+
+            function isInViewport(element) {
+                const rect = element.getBoundingClientRect();
+                return (
+                    rect.top >= -threshold &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) + threshold
+                );
+            }
+
+            function handleScroll() {
+                animatedElements.forEach((element) => {
+                    if (isInViewport(element) && !element.classList.contains('show')) {
+                        element.classList.add('show');
+                    }
+                });
+            }
+
+            // Initial check in case elements are already in the viewport
+            handleScroll();
+
+            // Add scroll event listener
+            window.addEventListener('scroll', handleScroll);
+        });
+    </script>
+</body>
 
 </body>

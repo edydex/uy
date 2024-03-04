@@ -59,7 +59,7 @@
                 <li><a href="live.html" title="Live">Live</a></li>
                 <li><a href="about.html" title="About">About</a></li>
                 <li class="current"><a href="events.html" title="Services">Events</a></li>
-                <li><a href="donate.html" title="Donate">Donate</a></li>	
+                <li><a href="give" title="Give">Give</a></li>	
             </ul>
         </nav>
 
@@ -104,7 +104,7 @@
 					<br> You can download Hased from <a href="https://styleshout.com/free-templates/hesed/" style="text-decoration: underline;">this Link!</a>
                     </p>
                     <div class="event-title">
-                        <h2 class="display-1">LoV version</h2>
+                        <h2 class="display-1">LoV/ UnitedYouth version</h2>
                     </div>
                     <p>
                     We did few changes and adjustments to the template to make it work better for us. If you'd like to 
@@ -119,11 +119,6 @@
 					Simple answer - its cheaper and more customizable. Money is resource given to us by God to be good stewards of. Money is 
 					to be used for promotion of His Kingdom and His message. Using an a static HTML website 
 					allows us to host it for free with GitHub or GitLab Pages, and save on web-hosting. 
-					<br> This means that the only cost assiciated with the website is our domain, 
-					which is $13 per year with NameCheap. I would also like to mention other services that keep our costs down:
-					Zoho Mail - free custom-domail email; 
-					Formspree - Free "Forms" solution.
-					
 					</p>
 
 
@@ -174,7 +169,7 @@
     </section> <!-- end s-social -->
 
 
-    <!-- footer
+   <!-- footer
     ================================================== -->
     <footer class="s-footer">
 
@@ -182,7 +177,7 @@
             <div class="column large-4 medium-5 tab-full">
                 <div class="footer-logo">
                     <a class="site-footer-logo" href="index.html">
-                        <img src="images/lovLogo.svg" alt="Homepage">
+                        <img src="images/uyagLogoZoomB&W_128x64.svg" alt="Homepage">
                     </a>
                 </div>  <!-- footer-logo -->
                 <p>
@@ -195,15 +190,15 @@
             <div class="column tab-full" style="max-width: 400px;">
                 <div class="row">
                     <div class="column medium-full">
-                        <h4 class="h6">Our Location</h4>
+                        <h4 class="h6">Contact Us</h4>
                         <p>
-                        17418 108th Ave SE <br>
-                        Renton, Washington <br>
-                        98055 US <!-- I'll need to move this to the right a b it more later -->
+                        Feel free to reach out <br>
+                        to us with any questions, <br>
+                        suggestions, or concerns <!-- I'll need to move this to the right a b it more later -->
                         </p>
         
                         <p>
-                        <a href="https://maps.app.goo.gl/Znu6bieFxvWoBNvF9" target="_blank" class="btn btn--footer">Get Directions</a>
+                        <a href="contact" target="_blank" class="btn btn--footer">Contact</a>
                         </p>
                     </div>
                     <!--<div class="column large-5 medium-full">
@@ -223,8 +218,8 @@
 
         <div class="row footer-bottom">
             <div class="column ss-copyright">
-                <span>© Copyright Life of Victory 2023</span> 
-                <span>Template by <a href="https://www.styleshout.com/">StyleShout</a>, thanks fellas</span>
+                <span>© Copyright United Youth 2024</span> 
+<!--                <span>See <a href="attributions.html">Attributions</a></span> -->
             </div>
         </div> <!-- footer-bottom -->
 
@@ -237,11 +232,39 @@
     </footer> <!-- end s-footer -->
 
 
-
     <!-- Java Script
     ================================================== -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const animatedElements = document.querySelectorAll('.slide-up');
+            const threshold = 80; // Adjust this threshold value as needed
+
+            function isInViewport(element) {
+                const rect = element.getBoundingClientRect();
+                return (
+                    rect.top >= -threshold &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) + threshold
+                );
+            }
+
+            function handleScroll() {
+                animatedElements.forEach((element) => {
+                    if (isInViewport(element) && !element.classList.contains('show')) {
+                        element.classList.add('show');
+                    }
+                });
+            }
+
+            // Initial check in case elements are already in the viewport
+            handleScroll();
+
+            // Add scroll event listener
+            window.addEventListener('scroll', handleScroll);
+        });
+    </script>
+</body>
 
 </body>

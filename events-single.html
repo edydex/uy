@@ -57,7 +57,7 @@
                 <li><a href="about" title="About">About</a></li>
                 <li><a href="events" title="Events">Events</a></li>				
                 <li><a href="findUs" title="Find Us">Find Us</a></li>
-                <li><a href="contact" title="Contact Us">Contact Us</a></li>	
+                <li><a href="give" title="Give">Give</a></li>	
             </ul>
         </nav>
 
@@ -168,7 +168,7 @@
     </section> <!-- end s-social -->
 
 
-    <!-- footer
+   <!-- footer
     ================================================== -->
     <footer class="s-footer">
 
@@ -189,15 +189,15 @@
             <div class="column tab-full" style="max-width: 400px;">
                 <div class="row">
                     <div class="column medium-full">
-                        <h4 class="h6">Support Us</h4>
+                        <h4 class="h6">Contact Us</h4>
                         <p>
-                        Consider supporting <br>
-                        our ministry with  <br>
-                        your donations. <!-- I'll need to move this to the right a b it more later -->
+                        Feel free to reach out <br>
+                        to us with any questions, <br>
+                        suggestions, or concerns <!-- I'll need to move this to the right a b it more later -->
                         </p>
         
                         <p>
-                        <a href="give" target="_blank" class="btn btn--footer">Give</a>
+                        <a href="contact" target="_blank" class="btn btn--footer">Contact</a>
                         </p>
                     </div>
                     <!--<div class="column large-5 medium-full">
@@ -217,8 +217,8 @@
 
         <div class="row footer-bottom">
             <div class="column ss-copyright">
-                <span>© Copyright United Youth 2023</span> 
-                <span>See <a href="attributions.html">Attributions</a></span>
+                <span>© Copyright United Youth 2024</span> 
+<!--                <span>See <a href="attributions.html">Attributions</a></span> -->
             </div>
         </div> <!-- footer-bottom -->
 
@@ -236,5 +236,34 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const animatedElements = document.querySelectorAll('.slide-up');
+            const threshold = 80; // Adjust this threshold value as needed
+
+            function isInViewport(element) {
+                const rect = element.getBoundingClientRect();
+                return (
+                    rect.top >= -threshold &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) + threshold
+                );
+            }
+
+            function handleScroll() {
+                animatedElements.forEach((element) => {
+                    if (isInViewport(element) && !element.classList.contains('show')) {
+                        element.classList.add('show');
+                    }
+                });
+            }
+
+            // Initial check in case elements are already in the viewport
+            handleScroll();
+
+            // Add scroll event listener
+            window.addEventListener('scroll', handleScroll);
+        });
+    </script>
+</body>
 
 </body>
